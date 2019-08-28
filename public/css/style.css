@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -74,14 +92,16 @@ form {
 }
 
 #eye {
-    padding-left: 30px;
+    margin-left: 30px;
     color: #faf0e8;
     font-size: 20px;
     cursor: pointer;
+    opacity: 0.5;
 }
 
-#eye.active {
-    color: #7f60eb;
+.fa-eye-slash {
+    color: white;
+    opacity: 1;
 }
 
 .input {
@@ -90,7 +110,7 @@ form {
 
 .input .fas {
     position: absolute;
-    top: 79px;
+    top: 75px;
     left: 301px;
     font-size: 15px;
 }
@@ -108,7 +128,6 @@ label span {
     position: relative;
     cursor: pointer;
     float: left;
-    left: 7.5%;
 }
 
 .rmb-me {
@@ -130,14 +149,33 @@ label span {
     color: #faf0e8;
     position: absolute;
     top: -4px;
-    left: -1px;
+    left: 1px;
     width: 13px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: #132738;
+    color: white;
+    opacity: 0.5;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 footer {
     float: right;
     padding: 20px;
-    margin: auto;
+    margin-bottom: 0;
 }
 
 footer a {
