@@ -49,6 +49,7 @@ function checkLogin() {
     if (!emptyEmail && !emptyPass) {
         if (!validateEmail(email.value)) {
             msg.style.visibility = 'visible';
+            email.style.border = '1px solid #ff3333'
             msg.style.animation = "shake 0.82s cubic-bezier(.36,.07,.19,.97) both";
             msg.innerHTML = "Please enter a valid email address";
             return false
